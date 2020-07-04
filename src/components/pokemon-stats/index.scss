@@ -1,0 +1,29 @@
+
+.wrap-top{
+    display: flex;
+    align-items: flex-start;
+    color: black !important;
+    .info-pokemon{
+        background-color: white;
+        display: flex;
+        border-radius: 10px 0px 0px 10px;
+        flex-direction: column;
+        width: 50%;
+        margin: 5px;
+        padding: 10px;
+    }
+    
+    .info-elementos{
+        align-items: flex-start;
+        width: 250px;
+    }
+    .wrap-img{
+        display: inline-block;
+        width: 50%;
+    }
+}
+.evolutions {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}

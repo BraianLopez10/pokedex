@@ -1,0 +1,14 @@
+.wrap-body {
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 500px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .wrap-body{
+        width: 100%;
+    }
+    
+}

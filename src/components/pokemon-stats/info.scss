@@ -1,0 +1,25 @@
+.wrap-info {
+    color: black;
+    display: flex   ;
+    justify-content: space-between;
+    .text-info{
+        h5{
+            text-transform: capitalize;
+            color: grey ;
+            font-weight: bold;
+            span{
+                color: black;
+            }
+        }
+        
+    }
+}
+.curiosidades{
+    color: black;
+}
+.type-span {
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0px 5px;
+    color: white;
+}

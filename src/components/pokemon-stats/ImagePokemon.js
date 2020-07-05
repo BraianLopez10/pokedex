@@ -28,15 +28,20 @@ export const ImagePokemon = ({ idPokemon }) => {
             height: "100%",
             objectFit: "scale-down"
         },
-        h4: {
-            width: "100%",
-            height: "100%",
+        loading: {
+            margin: "auto",
+            width: "100px",
+            height: "100px",
+            marginTop: "100px"
         }
     }
     return (
-        <React.Fragment>
+        <div style={{ width: "352px", height: "352px", margin: "auto" }}>
 
-            {loading ? (<CircularProgress color="primary" style={styles.h4}>Cargando...</CircularProgress>) : (<img style={styles.img} src={img} alt="pokemon"></img >)}
-        </React.Fragment>
+            {loading ?
+                (<CircularProgress color="primary" className="loading"></CircularProgress>)
+                :
+                (<img width="300px" className="image" height="300px" src={img} alt="pokemon"></img >)}
+        </div>
     )
 }

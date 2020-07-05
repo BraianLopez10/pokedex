@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { PokemonList } from './pokemon-list';
+import { CircularProgress } from '@material-ui/core'
 import './home.scss'
 export const Home = () => {
 
     const [pokemonsData, setPokemonsData] = useState([]);
-
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
 
         async function loadPokemons() {
@@ -13,6 +14,7 @@ export const Home = () => {
             let data = await response.json();
             console.log(data);
             await getPokemonsDetails(data.results);
+            setLoading(false);
         }
 
         loadPokemons();
@@ -31,6 +33,11 @@ export const Home = () => {
     }
     return (
         <div className="wrap-home">
+            {loading && (
+                <div >
+                    <CircularProgress></CircularProgress>
+                </div>
+            )}
             {pokemonsData.map((p, index) => {
                 return <PokemonList pokemon={p} key={index}></PokemonList>
             })}

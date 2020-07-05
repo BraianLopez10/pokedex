@@ -3,8 +3,10 @@ import { ImagePokemon } from './ImagePokemon'
 import { Stats } from './Stats'
 import { chooseColor } from '../Utils/utils'
 import { Evolution } from './Evolution';
+import { Curiosidades } from './Curiosidades'
 import './index.scss';
 import { Info } from './Info';
+import { CircularProgress } from '@material-ui/core';
 
 export const PokemonStats = (props) => {
 
@@ -44,26 +46,32 @@ export const PokemonStats = (props) => {
         }
     }, [props.location.pathname])
     return (
-        <div >
+        <div className="wrap-pokemon-stat" style={{ backgroundColor: color, color: "white" }}>
             {!loading ? (
                 <React.Fragment>
-                    <div className="wrap-top" style={{ backgroundColor: color, color: "white" }}>
-                        <div className="wrap-img">
-                            <ImagePokemon idPokemon={idPokemon}></ImagePokemon>
-                            <Stats stats={pokemon.stats} color={color}></Stats>
-                        </div>
-                        <div className="info-pokemon">
-                            <Info info={pokemon} rateCapture={specie.capture_rate} flavor_text={specie.flavor_text_entries} ></Info>
 
-                        </div>
+                    <div >
+                        <ImagePokemon idPokemon={idPokemon}></ImagePokemon>
+                    </div>
+                    <div >
+                        <Stats stats={pokemon.stats} color={color}></Stats>
+                    </div>
+                    <div className="wrap-info-stat">
+                        <Info info={pokemon} rateCapture={specie.capture_rate}  ></Info>
+                    </div>
 
-                    </div >
-                    <div className="evolutions">
+
+
+                    <div className="wrap-curiosidades-stat">
+                        <Curiosidades curiosidades={specie.flavor_text_entries}></Curiosidades>
+                    </div>
+
+                    <div className="wrap-evolution-stat">
                         <Evolution idPokemon={idPokemon} ></Evolution>
                     </div>
 
                 </React.Fragment>
-            ) : ("Cargando...")}
+            ) : (<CircularProgress></CircularProgress>)}
 
         </div >
 

@@ -1,0 +1,24 @@
+.curiosidades{
+    padding: 10px; 
+    & li {
+        list-style: none;
+    }
+    & ul {
+        margin: 0;
+        padding: 0;
+    }
+   
+    text-decoration: none;
+    text-align: left;
+    & h3 {
+        text-align: center;
+    }
+    & .show{
+        color: black;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+       
+    }
+}

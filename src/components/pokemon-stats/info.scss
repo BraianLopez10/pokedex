@@ -1,11 +1,23 @@
-.wrap-info {
-    color: black;
-    display: flex   ;
+.wrap-info{
+    padding: 10px;
+    & ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    & li {
+        list-style: none;
+    }
+}
+.text-wrap {
+
+    display: flex;
     justify-content: space-between;
-    .text-info{
+    & .text-info{
+        text-transform: uppercase;
+        text-align: left;
         h5{
             text-transform: capitalize;
-            color: grey ;
+            color: rgb(78, 76, 76) ;
             font-weight: bold;
             span{
                 color: black;
@@ -14,10 +26,13 @@
         
     }
 }
-.curiosidades{
-    color: black;
+
+.title{
+    text-transform: uppercase;
 }
+
 .type-span {
+    display: inline-block;
     padding: 5px;
     border-radius: 10px;
     margin: 0px 5px;

@@ -19,6 +19,6 @@ export const Bar = ({ porcentaje, titulo, color }) => {
                     {porcentaje + " %"}
                 </div>
             </div>
-        </React.Fragment>
+        </React.Fragment >
     )
 }

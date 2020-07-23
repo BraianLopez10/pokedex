@@ -16,10 +16,10 @@ export const PokemonList = ({ pokemon }) => {
                 </div>
                 <h4 className="name">{pokemon.name}</h4>
                 <div className="tipos">
-                    {pokemon.types.map((t) => {
+                    {pokemon.types.map((t, index) => {
                         let color = chooseColor(t.type.name);
                         return (
-                            <span style={{ backgroundColor: color.bg, color: color.font }}>
+                            <span key={index} style={{ backgroundColor: color.bg, color: color.font }}>
                                 <span> {t.type.name}</span>
                             </span>
                         )

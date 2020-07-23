@@ -12,7 +12,6 @@ export const Home = () => {
 
             let response = await fetch('https://pokeapi.co/api/v2/pokemon')
             let data = await response.json();
-            console.log(data);
             await getPokemonsDetails(data.results);
             setLoading(false);
         }
@@ -23,7 +22,6 @@ export const Home = () => {
     const getPokemonsDetails = async (data) => {
 
         let _pokemons = await Promise.all(data.map(async (p) => {
-            console.log(p.name)
             let result = await fetch('https://pokeapi.co/api/v2/pokemon/' + p.name);
             let poke = await result.json();
             return poke;

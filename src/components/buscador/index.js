@@ -35,7 +35,7 @@ export const Buscador = () => {
       </div>
       {Object.keys(pokemon).length > 0 && (
         <div className="result">
-          <img src={pokemon.sprites["front_default"]}></img>
+          <img src={pokemon.sprites["front_default"]} alt="front"></img>
         </div>
       )}
     </div>
